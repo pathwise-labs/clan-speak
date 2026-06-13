@@ -1,0 +1,58 @@
+.coo {
+  display: block;
+  overflow: visible;
+}
+
+.coo--idle {
+  animation: coo-bob 3.2s var(--ease-out) infinite;
+  transform-origin: 50% 90%;
+}
+
+.coo--idle .coo__fringe {
+  animation: coo-sway 4s ease-in-out infinite;
+  transform-origin: 60px 50px;
+}
+
+.coo--idle .coo__eyes {
+  animation: coo-blink 5s steps(1) infinite;
+  transform-origin: 60px 75px;
+}
+
+@keyframes coo-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+}
+
+@keyframes coo-sway {
+  0%,
+  100% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+}
+
+@keyframes coo-blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coo--idle,
+  .coo--idle .coo__fringe,
+  .coo--idle .coo__eyes {
+    animation: none;
+  }
+}

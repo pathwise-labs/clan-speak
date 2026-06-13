@@ -1,0 +1,77 @@
+import type { Achievement } from '@/types';
+
+/** Milestone badges. `unlocked` is derived from game state at render time. */
+export const achievements: Achievement[] = [
+  {
+    id: 'first_lesson',
+    name: 'Ciad Cheum',
+    english: 'First Step',
+    desc: 'Complete your very first lesson',
+    icon: 'sprout',
+    tint: 'var(--c-green)',
+  },
+  {
+    id: 'streak_3',
+    name: 'Trì Latha',
+    english: 'Three Days',
+    desc: 'Reach a 3-day streak',
+    icon: 'flame',
+    tint: 'var(--c-flame)',
+  },
+  {
+    id: 'streak_7',
+    name: 'Seachdain',
+    english: 'A Week',
+    desc: 'Reach a 7-day streak',
+    icon: 'flame',
+    tint: 'var(--c-heart)',
+  },
+  {
+    id: 'xp_100',
+    name: 'Sgoilear Òg',
+    english: 'Young Scholar',
+    desc: 'Earn 100 XP',
+    icon: 'star',
+    tint: 'var(--c-gold)',
+  },
+  {
+    id: 'xp_500',
+    name: 'Sgoilear',
+    english: 'Scholar',
+    desc: 'Earn 500 XP',
+    icon: 'crown',
+    tint: 'var(--c-heather)',
+  },
+  {
+    id: 'perfect',
+    name: 'Foirfe',
+    english: 'Perfect',
+    desc: 'Finish a lesson with no mistakes',
+    icon: 'trophy',
+    tint: 'var(--c-saltire)',
+  },
+  {
+    id: 'combo_5',
+    name: 'Sreath',
+    english: 'On a Roll',
+    desc: 'Hit a 5-answer combo',
+    icon: 'bolt',
+    tint: 'var(--c-gold-deep)',
+  },
+  {
+    id: 'unit_1',
+    name: 'Fàilte Slàn',
+    english: 'Unit Cleared',
+    desc: 'Finish every lesson in a unit',
+    icon: 'shield',
+    tint: 'var(--c-thistle)',
+  },
+  {
+    id: 'shopper',
+    name: 'Ceannaiche',
+    english: 'Shopper',
+    desc: 'Buy your first item from the shop',
+    icon: 'gem',
+    tint: 'var(--c-saltire)',
+  },
+];

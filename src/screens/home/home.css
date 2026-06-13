@@ -1,0 +1,138 @@
+.home {
+  padding-bottom: var(--sp-8);
+}
+
+.path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Unit banner */
+.unit-banner {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  width: calc(100% - var(--sp-6));
+  margin: var(--sp-4) 0 var(--sp-2);
+  border-radius: var(--r-lg);
+  color: #fff;
+  overflow: hidden;
+  box-shadow: var(--sh-1);
+}
+
+.unit-banner__hills {
+  position: absolute;
+  inset: auto 0 0 0;
+  line-height: 0;
+  opacity: 0.9;
+}
+
+.unit-banner__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+}
+
+.unit-banner__eyebrow {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.unit-banner__title {
+  color: #fff;
+  font-size: var(--fs-lg);
+  line-height: 1.1;
+}
+
+.unit-banner__subtitle {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  opacity: 0.9;
+}
+
+.unit-banner__count {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border-radius: var(--r-pill);
+  background: rgba(0, 0, 0, 0.18);
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-sm);
+}
+
+/* Winding lane */
+.lane {
+  position: relative;
+  margin: var(--sp-2) auto var(--sp-6);
+}
+
+.lane__path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.lane__path-base {
+  fill: none;
+  stroke: var(--track);
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+
+.lane__path-dash {
+  fill: none;
+  stroke: color-mix(in srgb, var(--brand) 35%, var(--bg-app));
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1 16;
+}
+
+.lane__node {
+  position: absolute;
+  width: 88px;
+  display: grid;
+  place-items: center;
+}
+
+/* End-of-path flag */
+.path__end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--sp-6) 0 var(--sp-8);
+  text-align: center;
+}
+
+.path__end-flag {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  color: var(--brand);
+  font-size: var(--fs-md);
+}
+
+.path__end-sub {
+  color: var(--text-muted);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+}

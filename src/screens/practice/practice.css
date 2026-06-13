@@ -1,0 +1,53 @@
+.practice__hero {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.practice__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.practice__card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.practice__icon {
+  --p-tint: var(--brand);
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--p-tint) 16%, var(--bg-surface));
+  color: var(--p-tint);
+}
+
+.practice__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.practice__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-md);
+}
+
+.practice__desc {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.practice__chev {
+  color: var(--text-muted);
+  flex: none;
+}

@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Cànan design tokens
+   Raw palette → semantic tokens. Components consume ONLY semantic tokens.
+   Light is the default; [data-theme="dark"] overrides the semantic layer.
+   ========================================================================== */
+
+:root {
+  /* ---- Raw brand palette (Scottish identity) ---- */
+  --c-heather: #6a4c93; /* deep heather purple */
+  --c-heather-deep: #4e3570;
+  --c-thistle: #b07fc7; /* thistle */
+  --c-thistle-soft: #d7b8e6;
+  --c-saltire: #005eb8; /* saltire blue */
+  --c-saltire-soft: #4d93d9;
+  --c-green: #58a700; /* correct */
+  --c-green-deep: #3f7d00;
+  --c-red: #e5474a; /* incorrect */
+  --c-red-deep: #c2353a;
+  --c-gold: #ffc93c; /* gems / legendary */
+  --c-gold-deep: #e0a500;
+  --c-flame: #ff7a1a; /* streak */
+  --c-heart: #ff4b6e; /* hearts */
+
+  /* mascot coat (warm ginger Highland cow) */
+  --cow-coat: #c97b3c;
+  --cow-coat-deep: #a85f28;
+  --cow-fringe: #e8a866;
+  --cow-horn: #efe2c8;
+  --cow-muzzle: #f6d9c2;
+
+  /* ---- Semantic tokens — LIGHT ---- */
+  --bg-app: #f3eefa;
+  --bg-surface: #ffffff;
+  --bg-surface-2: #f6f2fb;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #ece4f6;
+  --bg-frame: #d9cdec;
+
+  --text-primary: #1e1430;
+  --text-secondary: #4a3f63;
+  --text-muted: #837a96;
+  --text-inverse: #ffffff;
+  --text-on-brand: #ffffff;
+
+  --border: #e3deec;
+  --border-strong: #cfc6df;
+  --divider: #ece7f4;
+
+  --brand: var(--c-heather);
+  --brand-soft: #ede4f6;
+  --accent: var(--c-saltire);
+  --accent-soft: #dceaf8;
+  --success: var(--c-green);
+  --success-soft: #e6f4d6;
+  --danger: var(--c-red);
+  --danger-soft: #fbe0e1;
+  --gold: var(--c-gold);
+
+  --node-locked: #c9c3d6;
+  --node-locked-ring: #b6aecb;
+  --track: #e6e0f0; /* progress / xp track */
+
+  /* ---- Spacing scale (4px base) ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  /* ---- Radii ---- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ---- Elevation / shadows ---- */
+  --sh-1: 0 2px 6px rgba(30, 20, 48, 0.08);
+  --sh-2: 0 6px 18px rgba(30, 20, 48, 0.12);
+  --sh-modal: 0 16px 48px rgba(30, 20, 48, 0.28);
+  --sh-press: rgba(30, 20, 48, 0.16); /* color for 3D button bottom edge */
+
+  /* ---- Typography ---- */
+  --font-ui: 'Nunito', 'Baloo 2', ui-rounded, 'Segoe UI Rounded', 'SF Pro Rounded',
+    system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Baloo 2', 'Nunito', ui-rounded, system-ui, sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 28px;
+  --fs-2xl: 36px;
+  --fs-3xl: 48px;
+  --lh-tight: 1.15;
+  --lh-normal: 1.45;
+  --fw-regular: 600; /* rounded fonts read better a touch heavier */
+  --fw-bold: 800;
+  --fw-black: 900;
+
+  /* ---- Motion ---- */
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-med: 240ms;
+  --dur-slow: 420ms;
+
+  /* ---- Layout ---- */
+  --phone-w: 390px;
+  --phone-h: 844px;
+  --topbar-h: 60px;
+  --bottomnav-h: 66px;
+}
+
+[data-theme='dark'] {
+  --bg-app: #15101f;
+  --bg-surface: #1e1730;
+  --bg-surface-2: #241d38;
+  --bg-elevated: #262038;
+  --bg-sunken: #120d1c;
+  --bg-frame: #0c0814;
+
+  --text-primary: #f3effa;
+  --text-secondary: #cdc4e0;
+  --text-muted: #9a90b4;
+  --text-inverse: #1e1430;
+  --text-on-brand: #ffffff;
+
+  --border: #322a47;
+  --border-strong: #43395e;
+  --divider: #2a2240;
+
+  --brand: var(--c-thistle);
+  --brand-soft: #2c2342;
+  --accent: var(--c-saltire-soft);
+  --accent-soft: #1c2740;
+  --success: #6fbf16;
+  --success-soft: #233316;
+  --danger: #f15c5f;
+  --danger-soft: #3a1d22;
+  --gold: var(--c-gold);
+
+  --node-locked: #3a3350;
+  --node-locked-ring: #2c2640;
+  --track: #2c2542;
+
+  --sh-1: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --sh-2: 0 8px 22px rgba(0, 0, 0, 0.5);
+  --sh-modal: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --sh-press: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,59 @@
+.pill {
+  --pill-color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px 5px 9px;
+  border-radius: var(--r-pill);
+  background: var(--bg-surface-2);
+  color: var(--pill-color);
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-sm);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.pill--button {
+  transition: transform var(--dur-fast);
+}
+.pill--button:hover {
+  filter: brightness(1.03);
+}
+.pill--button:active {
+  transform: scale(0.94);
+}
+
+.pill__icon {
+  color: var(--pill-color);
+}
+
+.pill--flame {
+  --pill-color: var(--c-flame);
+}
+.pill--gem {
+  --pill-color: var(--c-saltire);
+}
+.pill--heart {
+  --pill-color: var(--c-heart);
+}
+.pill--xp {
+  --pill-color: var(--c-gold-deep);
+}
+
+.pill__value--pulse {
+  display: inline-block;
+  animation: pill-pulse 0.4s var(--ease-pop);
+}
+
+@keyframes pill-pulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

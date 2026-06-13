@@ -1,0 +1,12 @@
+.topbar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  height: var(--topbar-h);
+  padding: 0 var(--sp-4);
+  background: var(--bg-app);
+  border-bottom: 1px solid var(--divider);
+  z-index: 10;
+}

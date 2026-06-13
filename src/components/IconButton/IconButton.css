@@ -1,0 +1,29 @@
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  padding: 8px;
+  border-radius: var(--r-pill);
+  color: var(--text-secondary);
+  transition:
+    background var(--dur-fast),
+    color var(--dur-fast),
+    transform var(--dur-fast);
+}
+
+.icon-btn:hover {
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--text-primary) 8%, transparent);
+}
+
+.icon-btn:active {
+  transform: scale(0.9);
+}
+
+.icon-btn--soft {
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+}
+.icon-btn--soft:hover {
+  background: var(--brand-soft);
+  color: var(--brand);
+}

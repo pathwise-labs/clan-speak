@@ -1,0 +1,61 @@
+.banner {
+  --banner-fg: var(--success);
+  --banner-bg: var(--success-soft);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--sp-4) var(--sp-4) calc(var(--sp-4) + env(safe-area-inset-bottom, 0px));
+  background: var(--banner-bg);
+  border-top-left-radius: var(--r-xl);
+  border-top-right-radius: var(--r-xl);
+  animation: banner-in var(--dur-med) var(--ease-pop);
+  z-index: 20;
+}
+
+.banner--error {
+  --banner-fg: var(--danger);
+  --banner-bg: var(--danger-soft);
+}
+
+.banner__row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
+.banner__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  color: var(--banner-fg);
+}
+
+.banner__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-lg);
+  color: var(--banner-fg);
+  line-height: 1.1;
+}
+
+.banner__detail {
+  margin-top: 2px;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: color-mix(in srgb, var(--banner-fg) 75%, var(--text-primary));
+}
+
+@keyframes banner-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,120 @@
+.shop__hero {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.shop__hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.shop__balance {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+}
+
+.shop__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.shop-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.shop-item__icon {
+  --s-tint: var(--brand);
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--s-tint) 16%, var(--bg-surface));
+  color: var(--s-tint);
+}
+
+.shop-item__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-item__name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-md);
+}
+
+.shop-item__owned {
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  background: var(--success-soft);
+  color: var(--success);
+  font-size: 11px;
+}
+
+.shop-item__desc {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.shop-item__buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+  padding: 9px 14px;
+  border-radius: var(--r-md);
+  background: var(--success);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-sm);
+  box-shadow: 0 3px 0 var(--c-green-deep);
+  transition: transform var(--dur-fast);
+}
+.shop-item__buy:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.shop-item__buy--disabled {
+  background: var(--bg-sunken);
+  color: var(--text-muted);
+  box-shadow: 0 3px 0 var(--border-strong);
+  cursor: not-allowed;
+}
+
+.shop-item__buy--active {
+  background: var(--gold);
+  color: #6a4a00;
+  box-shadow: 0 3px 0 var(--c-gold-deep);
+  cursor: default;
+}
+
+.shop__note {
+  margin-top: var(--sp-5);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}

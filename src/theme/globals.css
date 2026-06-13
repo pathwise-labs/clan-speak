@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Globals — reset + base typography. Imports tokens + fonts first.
+   ========================================================================== */
+@import './tokens.css';
+@import './fonts.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+  color: var(--text-primary);
+  /* The page behind the phone frame */
+  background: radial-gradient(
+      1200px 800px at 50% -10%,
+      color-mix(in srgb, var(--c-heather) 30%, transparent),
+      transparent 60%
+    ),
+    var(--bg-frame);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow: hidden; /* the phone frame owns scrolling */
+}
+
+#root {
+  display: grid;
+  place-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-tight);
+  color: var(--text-primary);
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--fw-bold);
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Accessible focus ring for keyboard users only */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand) 35%, transparent);
+}
+
+/* Portal host for full-screen overlays (lesson) and modals — covers the phone
+   screen without participating in the shell's flex layout. */
+.overlay-host {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+.overlay-host > * {
+  pointer-events: auto;
+}
+
+/* The Gaelic display class — used wherever Gàidhlig words appear */
+.gaelic {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  letter-spacing: 0.01em;
+}
+
+/* Utility: visually-hidden but screen-reader available */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,85 @@
+.phone {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.phone__bezel {
+  position: relative;
+  width: var(--phone-w);
+  height: var(--phone-h);
+  max-width: 100%;
+  max-height: 100%;
+  background: var(--bg-app);
+  border-radius: 44px;
+  border: 10px solid #0c0814;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.04),
+    0 30px 70px rgba(15, 8, 25, 0.5);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.phone__notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 26px;
+  background: #0c0814;
+  border-radius: var(--r-pill);
+  z-index: 30;
+}
+
+.phone__statusbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 26px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: var(--fw-black);
+  z-index: 25;
+  pointer-events: none;
+}
+
+.phone__sysicons {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phone__screen {
+  position: absolute;
+  inset: 0;
+  padding-top: 40px; /* clear the status bar */
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-app);
+  overflow: hidden;
+}
+
+/* On small screens, drop the bezel and go full-bleed. */
+@media (max-width: 460px), (max-height: 700px) {
+  .phone {
+    padding: 0;
+  }
+  .phone__bezel {
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .phone__notch {
+    display: none;
+  }
+}

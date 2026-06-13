@@ -1,0 +1,111 @@
+.league-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-1);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: var(--sp-4);
+}
+
+.league-head__title {
+  font-size: var(--fs-xl);
+  margin-top: var(--sp-2);
+}
+
+.league-head__sub {
+  color: var(--text-muted);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+}
+
+.league-head__tiers {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-sm);
+}
+
+.league-head__tier {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.league-head__tier--current {
+  color: var(--brand);
+  font-size: var(--fs-md);
+}
+
+.league-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.league-zone {
+  text-align: center;
+  font-size: 11px;
+  font-weight: var(--fw-black);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--success);
+  padding: var(--sp-1) 0;
+  border-top: 2px dashed color-mix(in srgb, var(--success) 50%, transparent);
+}
+.league-zone--demo {
+  color: var(--danger);
+  border-top-color: color-mix(in srgb, var(--danger) 50%, transparent);
+}
+
+.league-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-md);
+}
+
+.league-row--me {
+  background: var(--brand-soft);
+  box-shadow: inset 0 0 0 2px var(--brand);
+}
+
+.league-row__rank {
+  width: 26px;
+  flex: none;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  color: var(--text-muted);
+}
+.league-row__rank--promo {
+  color: var(--success);
+}
+.league-row__rank--demo {
+  color: var(--danger);
+}
+
+.league-row__name {
+  flex: 1;
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.league-row__xp {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex: none;
+  color: var(--c-gold-deep);
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-sm);
+}

@@ -1,0 +1,10 @@
+/* ==========================================================================
+   Fonts
+   To honour the "no binary assets / no network" constraint, Cànan ships with
+   NO bundled font files and makes NO external font requests. We rely on a
+   rounded system-font stack (defined in tokens.css: --font-ui / --font-display)
+   that renders the grave-accented Gaelic vowels (à è ì ò ù) reliably on every
+   platform. To self-host Nunito / Baloo 2 later, drop the woff2 files in
+   /public/fonts and add @font-face rules here — the token stacks already list
+   those families first, so they'll be picked up automatically.
+   ========================================================================== */

@@ -1,0 +1,55 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.shell__main {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  animation: screen-in var(--dur-med) var(--ease-out);
+}
+
+@keyframes screen-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shared screen scaffolding used by tab screens */
+.screen {
+  padding: var(--sp-4) var(--sp-4) var(--sp-8);
+  min-height: 100%;
+}
+
+.screen__title {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--sp-1);
+}
+
+.screen__subtitle {
+  color: var(--text-muted);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-5);
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--divider);
+}
+
+.screen-header__title {
+  font-size: var(--fs-lg);
+}

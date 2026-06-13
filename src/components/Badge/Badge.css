@@ -1,0 +1,42 @@
+.badge {
+  --badge-tint: var(--brand);
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 30% 30% 38% 38% / 34% 34% 42% 42%;
+  background: color-mix(in srgb, var(--badge-tint) 18%, var(--bg-surface));
+  color: var(--badge-tint);
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--badge-tint) 45%, transparent);
+}
+
+.badge__ring {
+  position: absolute;
+  inset: 14%;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--badge-tint) 26%, var(--bg-surface));
+}
+
+.badge__icon {
+  position: relative;
+  z-index: 1;
+}
+
+.badge--locked {
+  filter: grayscale(1);
+  opacity: 0.55;
+  color: var(--text-muted);
+}
+
+.badge__lock {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  display: grid;
+  place-items: center;
+  width: 36%;
+  height: 36%;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  box-shadow: var(--sh-1);
+}
